@@ -269,7 +269,7 @@ SET current_quantity = (
 		AND vi.market_date = (
 			SELECT max(market_date)
 			FROM vendor_inventory
-			WHERE vi.product_id = pu.product_id
+			WHERE product_id = pu.product_id
 		)
 );
 SELECT * FROM product_units;
